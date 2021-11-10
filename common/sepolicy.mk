@@ -31,9 +31,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/bliss/sepolicy/common/vendor
 endif
 
-# Selectively include legacy rules defined by the products
--include device/bliss/sepolicy/legacy-common/sepolicy.mk
-
 # Include atv rules on atv product
 ifeq ($(PRODUCT_IS_ATV), true)
 include device/bliss/sepolicy/atv/sepolicy.mk
