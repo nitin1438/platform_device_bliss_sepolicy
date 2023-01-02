@@ -12,3 +12,7 @@ r_dir_file(platform_app, mnt_pass_through_file)
 
 # Allow PowerShare HAL service to be found
 hal_client_domain(platform_app, hal_lineage_powershare)
+
+# Allow Launcher3 to access zram
+allow platform_app sysfs_zram:dir search;
+allow platform_app sysfs_zram:file r_file_perms;
